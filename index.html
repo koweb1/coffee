@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Coffee Haven</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="conatin">
+    <div class="container">
+        <header class="header">
+            <div class="logo">Coffee<span>Haven</span></div>
+            <i class='bx bx-menu'></i>
+            
+            <ul class="list-container">
+                <i class='bx bx-x'></i>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </header>
+
+
+        <section class="hero">
+    <div class="hero-content">
+        <h1>Great days begin <br>with great coffee.</h1>
+        <p class="hero-subtext">
+            Start your day with the perfect blend of aroma, warmth, and flavor.
+            Each cup is crafted to lift your mood, sharpen your focus,
+            and bring a moment of calm into your busy world.
+            <strong>your perfect brew starts right here.</strong>
+        </p>
+        <p class="hero-slogan">Brewed for those who dream.</p>
+        <a href="menu.html" class="btn">Explore Menu</a>
+    </div>
+</section>
+    </div>
+    <section class="popular">
+        <h2 class="popular-text">Popular Picks</h2>
+        <div class="popular-pick">
+            <div class="card" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="100">
+                <img src="./image/espressso.avif" alt="espressso image" loading="lazy-loading">
+                <h3>Espresso</h3>
+                 <p>Rich & bold, perfect for a morning boost.</p>
+                 <p class="price">$3.50</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="2000">
+                <img src="./image/capxino.jpg" alt="Cappuccino image" loading="lazy-loading">
+                <h3>Cappuccino</h3>
+                 <p>Creamy milk foam with strong espresso flavor.</p>
+                 <p class="price">$4.50</p>
+            </div>
+            <div class="card" data-aos="fade-left" data-aos-duration="2000"
+     data-aos-offset="100">
+                <img src="./image/mocha.jpg" alt="mocha image" loading="lazy-loading">
+                <h3>Mocha</h3>
+                 <p>Chocolatey delight with a coffee kick..</p>
+                 <p class="price">$5.00</p>
+            </div>
+
+        </div>
+    </section>
+
+<section class="discount-section" data-aos="flip-left" data-aos-duration="3000" data-aos-offset="300">
+    <div class="discount-content">
+        <h2>Special Coffee Discount</h2>
+        <p>Buy <span>3 cups</span> of any coffee and get <span>20% OFF</span> instantly!</p>
+        
+        <ul class="benefits">
+            <li>Freshly brewed every morning</li>
+            <li>Fast delivery to your doorstep</li>
+            <li>Discount applied automatically at checkout</li>
+        </ul>
+
+        <a href="menu.html" class="discount-btn">Order Now</a>
+    </div>
+</section>
+
+
+<section class="testimonial-section" data-aos="zoom-in-up" data-aos-duration="4000" data-aos-offset="300">
+    <div class="testimonial-container">
+        <h2>What Our Clients Say</h2>
+
+        <div class="testimonial-cards">
+
+            
+            <div class="testimonial-card">
+                <img src="./image/testimony1.jpg" alt="Client Photo">
+                <h3>Jane Doe</h3>
+                <p>"The coffee here is simply amazing! Fresh, aromatic, and just the right taste every time."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+            
+            <div class="testimonial-card">
+                <img src="./image/testimony2.jpg" alt="Client Photo">
+                <h3>John Smith</h3>
+                <p>"I love the variety and the quick delivery. Every cup feels like a little gift to myself."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+            
+            <div class="testimonial-card">
+                <img src="./image/testimony3.jpg" alt="Client Photo">
+                <h3>Mary Johnson</h3>
+                <p>"Best coffee in town! The discounts are a bonus, but the quality keeps me coming back."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="footer" >
+    <p>&copy; 2025 CoffeeHaven. All Rights Reserved.</p>
+    <div class="social-icons">
+        <p>Follow us on </p>
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-tiktok'></i></a>
+    </div>
+</footer>
+
+
+
+    </div>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        $("document").ready(function(){
+            $(".bx-menu").click(function(){
+                $(".list-container").removeClass("unshow_ul").addClass("show_ul");
+            });
+            $(".bx-x").click(function(){
+                $(".list-container").removeClass("show_ul").addClass("unshow_ul");
+            });
+        });
+    </script>   
+</body>
+</html>

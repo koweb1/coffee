@@ -7,9 +7,15 @@
 }
 body{
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 html{
     scroll-behavior: smooth;
+}
+.contain{
+    max-width: 1200px;
+    width: 100%;
+    height: 100vh;
 }
 .container{
     background: url(coffee-background1.jpg);
@@ -28,6 +34,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease;
 }
 .header .logo{
     font-size: 22px;
@@ -69,6 +76,23 @@ i{
     border-radius: 6px;
     transition: 0.3s;
 }
+.bx-chevron-up{
+    display: block !important;
+    position: fixed;
+    bottom: 16%;
+    right: 30px;
+    background: #8a633d;
+    color: #fff;
+    font-size: 23px;
+    border-radius: 50%;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.bx-chevron-up:hover{
+    background: #c29f7c;
+}
 .show_ul{
     margin-right: 0 !important;
 }
@@ -84,13 +108,15 @@ i{
         height: 250px;
         background-color: #a67c52; 
         padding: 35px 35px;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
     }
     .header{
         padding: 20px 35px;
-    }
+        position: fixed;
+        z-index: 10000;
+    }    
     .active{
         background-color: transparent;
     }
@@ -113,6 +139,10 @@ i{
         color: #fff;
         top: 1px;
         font-size: 30px;
+    }
+    .bx-chevron-up{
+        display: none !important;
+
     }
 }
 @media (max-width: 550px){
@@ -271,6 +301,7 @@ i{
 .popular{
     width: 100%;
     padding: 30px 40px;
+    position: relative;
 }
 .popular h2{
     text-align: center;
@@ -280,6 +311,7 @@ i{
     margin-bottom: 15px;
 }
 .popular-pick{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -451,6 +483,7 @@ i{
     background: #fafafa;
     padding: 80px 20px;
     text-align: center;
+    position: relative;
 }
 
 .testimonial-section h2 {
@@ -526,17 +559,10 @@ i{
 
 
 
-.footer {
-    background: #8a633d; 
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 40px;
-}
+
 
 .footer {
-    background: #8a633d; /* medium brown */
+    background: #8a633d;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -548,6 +574,7 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .footer .social-icons p{
     font-size: 14px;
@@ -573,5 +600,22 @@ i{
     font-size: 15px;
     transition: all 0.3s ease;
 }
-
+@media (max-width:760px){
+    .footer .social-icons{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .footer .social-icons a{
+        margin: 0 0 0 2px;
+    }
+    .footer .social-icons p{
+        margin-right: 30px;
+    }
+    .footer .social-icons a i{
+        font-size: 13px;
+    }
+}
 

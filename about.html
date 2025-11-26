@@ -6,20 +6,26 @@
     <title>About Us</title>
 
     <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Poppins", sans-serif;
             background:linear-gradient(135deg, #b88654, #a67c52);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             color: #333;
             text-align: center;
         }
 
         .container {
             max-width: 700px;
-            margin: 100px auto;
             background: white;
-            padding: 40px;
+            padding:30px 40px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
@@ -39,7 +45,7 @@
 
         .home-btn {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 15px;
             padding: 10px 22px;
             background:#a67c52 ;
             color: white;
@@ -49,7 +55,10 @@
         }
 
         .home-btn:hover {
-            background: #555;
+            background:#bb9166 ;
+        }
+        strong{
+            color: #a67c52;
         }
         @media (max-width: 860px) {
             body{
@@ -101,9 +110,15 @@
             }
         }
             @media (max-width: 460px){
+                body{
+                    margin:20px;
+                    min-height: unset;
+                }
                 .container{
                     width: 95%;
                     padding: 15px 25px;
+                    margin:10px 15px;
+                    height: 700px;
                 }
                 h1{
                     font-size: 26px;
@@ -115,20 +130,18 @@
 <body>
 
     <div class="container">
-        <h1>About Us Our Story</h1>
+        <h1>About Us</h1>
 
         <p>
-            Welcome to <strong>Coffee<span>Haven</span></strong>.  
-            We are passionate about delivering fresh, high-quality coffee that brings comfort, warmth, and joy to your day.
+            Thank you for visiting our cozy corner of the web. We believe that every cup of coffee is a moment of comfort, a spark of energy, and a little bit of happiness. That’s why we’re here  to serve you coffee that warms your heart and brightens your day
         </p>
 
         <p>
-            Every cup we serve is made with care from selecting the right beans to brewing with precision.  
-            Our goal is simple: to give you a great coffee experience every time you visit.
+            Our journey began with one simple idea: good coffee brings people together. What started as a small passion for roasting beans and creating unique flavors slowly grew into a full-fledged dream. Over time, we perfected our craft, learned from our customers, and built a place where quality, care, and creativity meet in every cup.
         </p>
 
         <p>
-            Thank you for choosing us. We appreciate you and look forward to serving you again.
+            We don’t just make coffee <strong>we create an experience</strong>. From selecting the finest beans to preparing every cup with love, our focus is on delivering unbeatable quality. Fresh, rich, smooth, and unforgettable — that’s our promise. With us, you’re not just enjoying coffee… <strong>you’re enjoying the best coffee experience possible.</strong>
         </p>
 
         <a href="index.html" class="home-btn">Go Back Home</a>

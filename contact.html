@@ -35,7 +35,7 @@
             width: 25%;
             height: 100%;
             display: flex;
-        flex-direction: column;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
@@ -59,6 +59,7 @@
             margin-bottom: 15px;
             margin-top: 15px;
             color:#a67c52 ;
+            display: block !important;
         }
         .content .left-side .details .topic{
             font-size: 18px;
@@ -108,7 +109,7 @@
             display: inline-block;
             margin-top: 6px;
         }
-        .right-side .button input[type="button"]{
+        .right-side .button input[type="submit"]{
             color: #fff;
             font-size: 18px;
             background: #a67c52;
@@ -119,7 +120,7 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        .right-side .button input[type="button"]:hover{
+        .right-side .button input[type="submit"]:hover{
             background:#c29f7c ;
         }
         @media (max-width:950px){
@@ -181,20 +182,47 @@
                 <p>Have an inquiry? Send us s message our team will respond with care.</p>
                 <form action="#">
                     <div class="input-box">
-                        <input type="text" placeholder="Enter your name">
+                        <input type="text" id="name" placeholder="Enter your name">
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Enter your Email">
+                        <input type="text" id="email" placeholder="Enter your Email">
                     </div>
                     <div class="input-box message-box">
-                        <textarea></textarea>
+                        <textarea id="text"></textarea>
                     </div>
                     <div class="button">
-                        <input type="button" value="Send Now">
+                        <input type="submit" id="send" value="Send Now">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+<script>
+let sendButton = document.getElementById('send').addEventListener('click', function(event) {
+    event.preventDefault();
+
+     let nameInput  = document.getElementById('name');
+    let emailInput = document.getElementById('email');
+    let textInput  = document.getElementById('text');
+
+   
+    let name  = nameInput.value.trim();
+    let email = emailInput.value.trim();
+    let text  = textInput.value.trim();
+
+
+    if (name === '' || email === '' || text === '') {
+        alert('Please fill in all fields before sending your message.');
+    } else {
+        nameInput.value  = '';
+        emailInput.value = '';
+        textInput.value  = '';
+
+        alert('Message sent successfully!');
+    }
+});
+
+</script>
 </body>
 </html>

@@ -143,6 +143,10 @@ html{
         top: 1px;
         font-size: 30px;
     }
+    .bx-menu{
+        position: fixed;
+        right: 30px;
+    }
     .bx-chevron-up{
         display: none !important;
 

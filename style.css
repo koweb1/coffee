@@ -44,13 +44,14 @@ html{
 .logo span {
     color: #a67c52;
 }
-  i{
+  .header .bx-menu{
     font-size: 24px;
     color: #a67c52;
+    width: 100%;
+    text-align: right;
     cursor: pointer;
-    display: none !important;
     padding: 7px;
-    overflow: hidden;
+    display: none;
 }
 .list-container{
     display: flex;
@@ -142,10 +143,6 @@ html{
         color: #fff;
         top: 1px;
         font-size: 30px;
-    }
-    .bx-menu{
-        position: fixed;
-        right: 30px;
     }
     .bx-chevron-up{
         display: none !important;

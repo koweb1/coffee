@@ -13,4 +13,17 @@ $("document").ready(function(){
             $('.bx-chevron-up').click(function(){
                 $('html').animate({scrollTop:0}, 500);
             });
+
+            const navLinks = document.querySelectorAll('.list-container li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+
+        // Remove active from all links
+        navLinks.forEach(item => item.classList.remove('active'));
+
+        // Add active to the clicked link
+        this.classList.add('active');
+    });
+});
         });
